@@ -9,8 +9,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const username = document.getElementById("username").value.trim();
         const password = document.getElementById("password").value.trim();
 
-        if (!username || !password) {
-            errorMessage.textContent = "Username and password required!";
+        if (!username ) {
+            errorMessage.textContent = "Username required!";
+            return;
+        }
+        if( !password){
+            errorMessage.textContent = "Password required!";
             return;
         }
 
